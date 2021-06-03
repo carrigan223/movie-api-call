@@ -45,7 +45,7 @@ server.post('/get-movie-details', (req, res) => {
                     fulfillmentMessages: [
                         {
                             text: {
-                                text: ['Text response from webhook'],
+                                text: [dataToSend],
                             },
                         },
                     ],
