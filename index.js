@@ -12,6 +12,10 @@ server.use(
 
 server.use(bodyParser.json());
 
+server.get('/', (req, res) => {
+    return res.send('welcome');
+});
+
 server.post('/get-movie-details', (req, res) => {
     const movieToSearch =
         req.body.result &&
@@ -54,7 +58,6 @@ server.post('/get-movie-details', (req, res) => {
     );
 });
 
-
-server.listen((process.env.PORT || 8000), () => {
-    console.log("Server is up and running...");
+server.listen(process.env.PORT || 8000, () => {
+    console.log('Server is up and running...');
 });
